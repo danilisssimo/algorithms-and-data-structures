@@ -13,7 +13,6 @@ class TestCase {
         this.result = result;
     }
 
-    // Геттеры для доступа к полям
     public int[] getTest() { return test; }
 
     public int[] getResult() { return result; }
