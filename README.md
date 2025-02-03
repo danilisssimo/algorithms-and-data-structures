@@ -8,4 +8,5 @@ Here is a list of algorithms I have already studied and implemented (the list wi
 
 ### Sorting Algorithms
 - [x] [Insertion Sort](/sort/insertionSort/README.md)
-- [ ] Merge Sort
+- [x] [Merge Sort](/sort/mergeSort/README.md)
+- [ ] Heap Sort
