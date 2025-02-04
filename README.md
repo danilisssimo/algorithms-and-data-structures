@@ -11,4 +11,5 @@ Here is a list of algorithms I have already studied and implemented (the list wi
 - [x] [Merge Sort](/sort/mergeSort/README.md)
 - [ ] Selection Sort
 - [ ] Quick Sort
+- [ ] Timsort
 - [ ] Heap Sort
