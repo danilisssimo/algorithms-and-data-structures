@@ -2,6 +2,7 @@ package sort;
 
 import sort.insertionSort.InsertionSort;
 import sort.mergeSort.MergeSort;
+import sort.selectionSort.SelectionSort;
 import java.util.*;
 
 class TestCase {
@@ -41,10 +42,11 @@ public class Tests {
     public static void main(String[] args) {
         insertionSortTest();
         mergeSortTest();
+        selectionSortTest();
     }
 
     public static void insertionSortTest() {
-        System.out.println("--- TEST FOR INSERTION SORT ---");
+        System.out.println("\n--- TEST FOR INSERTION SORT ---");
         for (int i = 0; i < testCases.length; i++) {
             int[] currentTest = testCases[i].getTest().clone();
             InsertionSort.sorted(currentTest);
@@ -59,10 +61,25 @@ public class Tests {
     }
 
     public static void mergeSortTest() {
-        System.out.println("--- TEST FOR MERGE SORT ---");
+        System.out.println("\n--- TEST FOR MERGE SORT ---");
         for (int i = 0; i < testCases.length; i++) {
             int[] currentTest = testCases[i].getTest().clone();
             currentTest = MergeSort.sorted(currentTest);
+            boolean testCaseResult = Arrays.equals(currentTest, testCases[i].getResult());
+            System.out.printf(
+                "Array: %s, Sorted: %s, Result: %s\n", 
+                Arrays.toString(testCases[i].getTest()),
+                Arrays.toString(currentTest),
+                Boolean.toString(testCaseResult)
+            );
+        }
+    }
+
+    public static void selectionSortTest() {
+        System.out.println("\n--- TEST FOR SELECTION SORT ---");
+        for (int i = 0; i < testCases.length; i++) {
+            int[] currentTest = testCases[i].getTest().clone();
+            SelectionSort.sorted(currentTest);
             boolean testCaseResult = Arrays.equals(currentTest, testCases[i].getResult());
             System.out.printf(
                 "Array: %s, Sorted: %s, Result: %s\n", 
