@@ -1,5 +1,5 @@
 # Insertion Sort
-**Complexity** if this algorithm $O(n^2)$
+**Complexity** of this algorithm $O(n^2)$
 
 ## Description
 

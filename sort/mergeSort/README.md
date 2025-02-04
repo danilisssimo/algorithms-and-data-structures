@@ -1,5 +1,5 @@
 # Merge Sort
-**Complexity** if this algorithm $O(n*log(n))$
+**Complexity** of this algorithm $O(n*log(n))$
 
 ## Description
 
