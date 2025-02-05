@@ -3,6 +3,7 @@ package sort;
 import sort.insertionSort.InsertionSort;
 import sort.mergeSort.MergeSort;
 import sort.selectionSort.SelectionSort;
+import sort.quickSort.QuickSort;
 import java.util.*;
 
 class TestCase {
@@ -43,6 +44,7 @@ public class Tests {
         insertionSortTest();
         mergeSortTest();
         selectionSortTest();
+        quickSortTest();
     }
 
     public static void insertionSortTest() {
@@ -80,6 +82,21 @@ public class Tests {
         for (int i = 0; i < testCases.length; i++) {
             int[] currentTest = testCases[i].getTest().clone();
             SelectionSort.sorted(currentTest);
+            boolean testCaseResult = Arrays.equals(currentTest, testCases[i].getResult());
+            System.out.printf(
+                "Array: %s, Sorted: %s, Result: %s\n", 
+                Arrays.toString(testCases[i].getTest()),
+                Arrays.toString(currentTest),
+                Boolean.toString(testCaseResult)
+            );
+        }
+    }
+
+    public static void quickSortTest() {
+        System.out.println("\n--- TEST FOR QUICK SORT ---");
+        for (int i = 0; i < testCases.length; i++) {
+            int[] currentTest = testCases[i].getTest().clone();
+            currentTest = QuickSort.sorted(currentTest);
             boolean testCaseResult = Arrays.equals(currentTest, testCases[i].getResult());
             System.out.printf(
                 "Array: %s, Sorted: %s, Result: %s\n", 
