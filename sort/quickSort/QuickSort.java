@@ -40,8 +40,8 @@ public class QuickSort {
         }
         newArray[left.length] = middleEl;
         index++;
-        while (index - left.length < right.length) {
-            newArray[index - left.length] = right[index];
+        while (index - left.length - 1 < right.length) {
+            newArray[index] = right[index - left.length - 1];
             index++;
         }
         System.out.println(Arrays.toString(newArray));
