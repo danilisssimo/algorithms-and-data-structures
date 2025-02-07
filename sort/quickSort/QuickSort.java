@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class QuickSort {
     
     public static int[] sorted(int[] array) {
-        if (array.length < 3) { return array; }
+        if (array.length <= 1) { return array; }
         int supportIndex = array.length - 1;
         int index = 0;
         while (index < supportIndex) {
@@ -21,12 +21,6 @@ public class QuickSort {
         }
         int[] leftArray = Arrays.copyOfRange(array, 0, supportIndex);
         int[] rightArray = Arrays.copyOfRange(array, supportIndex+1, array.length);
-        System.out.printf(
-            "%s %d %s\n", 
-            Arrays.toString(leftArray), 
-            array[supportIndex], 
-            Arrays.toString(rightArray)
-            );
         return getConcatArrays(sorted(leftArray), array[supportIndex], sorted(rightArray));
     }
 
@@ -44,7 +38,6 @@ public class QuickSort {
             newArray[index] = right[index - left.length - 1];
             index++;
         }
-        System.out.println(Arrays.toString(newArray));
         return newArray;
     }
 }
