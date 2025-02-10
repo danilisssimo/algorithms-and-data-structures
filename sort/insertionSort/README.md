@@ -1,6 +1,7 @@
-# Insertion Sort
-**Complexity** of this algorithm $O(n^2)$
+# Сортировка вставкой
+**Вычислительная сложность** - $O(n^2)$
+**Затраты памяти** - $O(1)$
 
-## Description
+## Описание
 
-![Algorithm execution on page 59](assets/insertionSort.png)
+![Описание алгоритма на странице 59](assets/insertionSort.png)

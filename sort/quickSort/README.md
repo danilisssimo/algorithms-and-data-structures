@@ -1,8 +1,10 @@
-# Quick Sort
-**Complexity** of this algorithm $O(n*log(n))$
+# Быстрая сортировка
 
-## Description
+**Вычислительная сложность** - $O(n*log(n))$<br>
+**Пространственная сложность** - $O(n)$ 
 
-![Algorithm execution](assets/Sorting_quicksort_anim.gif)
+## Описание
 
-All description you can find on [wikipedia](https://ru.wikipedia.org/wiki/Быстрая_сортировка)
+![Принцип работы алгоритма](assets/Sorting_quicksort_anim.gif)
+
+Полное описание работы данного алгоритма вы сможете найти на [wikipedia](https://ru.wikipedia.org/wiki/Быстрая_сортировка)

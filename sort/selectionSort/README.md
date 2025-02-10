@@ -1,8 +1,8 @@
-# Selection Sort
-**Complexity** of this algorithm $O(n^2)$
+# Сортировка выбором
+**Вычислительная сложность** - $O(n^2)$<br>
+**Пространственная сложность** - $O(1)$
 
-## Description
+## Описание
+![Принцип работы алгоритма](assets/Selection-Sort-Animation.gif)
 
-![Algorithm execution](assets/Selection-Sort-Animation.gif)
-
-All description you can find on [wikipedia](https://ru.wikipedia.org/wiki/Сортировка_выбором)
+Полное описание работы данного алгоритма вы сможете найти на [wikipedia](https://ru.wikipedia.org/wiki/Сортировка_выбором)

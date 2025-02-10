@@ -1,6 +1,7 @@
-# Merge Sort
-**Complexity** of this algorithm $O(n*log(n))$
+# Сортировка слиянием
+**Вычислительная сложность** - $O(n*log(n))$
+**Затраты памяти** - $O(n)$
 
-## Description
+## Описание
 
-![Algorithm execution on page 75](assets/mergeSort.png)
+![Описание алгоритма на странице 75](assets/mergeSort.png)
