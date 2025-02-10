@@ -27,9 +27,15 @@
 Здесь список алгоритмов, которые я изучил и реализовал (данный список будет обновляться по мере моего обучения)
 
 ### Sorting Algorithms
-- [x] [Insertion Sort](/sort/insertionSort/README.md)
-- [x] [Merge Sort](/sort/mergeSort/README.md)
-- [x] [Selection Sort](/sort/selectionSort/README.md)
-- [x] [Quick Sort](/sort/quickSort/README.md)
+- [x] [Insertion Sort](/SortingAlgorithms/insertionSort/README.md)
+- [x] [Merge Sort](/SortingAlgorithms/mergeSort/README.md)
+- [x] [Selection Sort](/SortingAlgorithms/selectionSort/README.md)
+- [x] [Quick Sort](/SortingAlgorithms/quickSort/README.md)
 - [ ] Timsort
 - [ ] Heap Sort
+
+### Searching Algorithms
+- [] Linear Search
+- [] Binary Search
+- [] Depth-First Search
+- [] Breadth-First Search

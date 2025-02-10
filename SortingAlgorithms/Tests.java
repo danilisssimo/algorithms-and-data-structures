@@ -1,9 +1,9 @@
-package sort;
+package SortingAlgorithms;
 
-import sort.insertionSort.InsertionSort;
-import sort.mergeSort.MergeSort;
-import sort.selectionSort.SelectionSort;
-import sort.quickSort.QuickSort;
+import SortingAlgorithms.insertionSort.InsertionSort;
+import SortingAlgorithms.mergeSort.MergeSort;
+import SortingAlgorithms.selectionSort.SelectionSort;
+import SortingAlgorithms.quickSort.QuickSort;
 import java.util.*;
 
 class TestCase {
