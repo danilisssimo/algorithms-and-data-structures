@@ -41,6 +41,7 @@ public class Tests {
     };
 
     public static TestCase[] binaryTestCases = {
+        // Не срабатывает 2 тест
         new TestCase(new int[]{1, 2, 3, 4, 5, 6}, 1, 0),  // Искомое число 1 находится на индексе 0
         new TestCase(new int[]{1, 2, 3, 4, 5, 6}, 6, 5),  // Искомое число 6 находится на индексе 5
         new TestCase(new int[]{1, 2, 3, 4, 5, 6}, 3, 2),  // Искомое число 3 находится на индексе 2
@@ -67,7 +68,7 @@ public class Tests {
     }
 
     public static void binarySearchTest() {
-        System.out.println("\n--- TEST FOR LINEAT SEARCH ---");
+        System.out.println("\n--- TEST FOR BINARY SEARCH ---");
         for (int i = 0; i < binaryTestCases.length; i++) {
             int[] currentTest = binaryTestCases[i].getTestArray().clone();
             int result = BinarySearch.indexOf(currentTest, binaryTestCases[i].getTestSearching());
