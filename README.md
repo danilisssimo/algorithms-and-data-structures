@@ -37,5 +37,5 @@
 ### Searching Algorithms
 - [x] [Linear Search](/SearchingAlgorithms/LinearSearch/README.md)
 - [x] [Binary Search](/SearchingAlgorithms/BinarySearch/README.md)
-- [] Depth-First Search
-- [] Breadth-First Search
+- [ ] Depth-First Search
+- [ ] Breadth-First Search
