@@ -6,18 +6,18 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func (node *TreeNode) FindNode(value int) bool {
-	var result bool = false
+func (node *TreeNode) FindNode(value int) *TreeNode {
+	var result *TreeNode = nil
 	if node == nil {
-		return false
+		return nil
 	}
 	if node.Value == value {
-		return true
+		return node
 	}
 	if node.Left != nil {
 		result = node.Left.FindNode(value)
 	}
-	if node.Right != nil && !result {
+	if node.Right != nil && result == nil {
 		result = node.Right.FindNode(value)
 	}
 	return result
