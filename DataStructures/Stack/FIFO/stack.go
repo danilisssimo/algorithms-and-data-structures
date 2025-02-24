@@ -11,6 +11,7 @@ type Queue struct {
 	nextFreePlaceIndex int
 }
 
+// Dequeue delete and return first element of stack
 func (queue *Queue) Dequeue() interface{} {
 	if queue.length <= 0 {
 		return errors.New("Queue is null")
@@ -19,10 +20,10 @@ func (queue *Queue) Dequeue() interface{} {
 	queue.elements = queue.elements[1:]
 	queue.length--
 	queue.nextFreePlaceIndex--
-	fmt.Printf("Length: %d, NextFreePlaceIndex: %d\n", queue.length, queue.nextFreePlaceIndex)
 	return result
 }
 
+// Enqueue append first element of stack
 func (queue *Queue) Enqueue(el interface{}) {
 	if queue.nextFreePlaceIndex >= queue.length {
 		queue.length++
@@ -31,9 +32,14 @@ func (queue *Queue) Enqueue(el interface{}) {
 		queue.elements[queue.nextFreePlaceIndex] = el
 	}
 	queue.nextFreePlaceIndex++
-	fmt.Printf("Length: %d, NextFreePlaceIndex: %d\n", queue.length, queue.nextFreePlaceIndex)
 }
 
+// GetLength returned length of queue
+func (queue *Queue) GetLength() int {
+	return queue.length
+}
+
+// Draw printing all queue
 func (queue *Queue) Draw() {
 	for _, el := range queue.elements {
 		fmt.Printf("%+v ", el)
@@ -41,6 +47,7 @@ func (queue *Queue) Draw() {
 	fmt.Printf("\n")
 }
 
+// GetNewQueue init new queue and return it
 func GetNewQueue(size int) *Queue {
 	var queue Queue = Queue{
 		elements:           make([]interface{}, size),
