@@ -1,13 +1,19 @@
-package tree
+package DFSTree
 
-type TreeNode struct {
-	Value int
-	Left  *TreeNode
-	Right *TreeNode
+import (
+	tree "algorithms-and-data-structures/DataStructures/TreeStructure/Tree"
+)
+
+type Node struct {
+	*tree.Node
 }
 
-func (node *TreeNode) FindNode(value int) *TreeNode {
-	var result *TreeNode = nil
+func (node *Node) FindNode(value int) *tree.Node {
+	return findNode(node.Node, value)
+}
+
+func findNode(node *tree.Node, value int) *tree.Node {
+	var result *tree.Node = nil
 	if node == nil {
 		return nil
 	}
@@ -15,10 +21,10 @@ func (node *TreeNode) FindNode(value int) *TreeNode {
 		return node
 	}
 	if node.Left != nil {
-		result = node.Left.FindNode(value)
+		result = findNode(node.Left, value)
 	}
 	if node.Right != nil && result == nil {
-		result = node.Right.FindNode(value)
+		result = findNode(node.Right, value)
 	}
 	return result
 }
