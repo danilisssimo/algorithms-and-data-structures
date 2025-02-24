@@ -1,8 +1,8 @@
 package main
 
 import (
+	fifo "algorithms-and-data-structures/DataStructures/Stack/FIFO"
 	"fmt"
-	"main/fifo"
 )
 
 func main() {

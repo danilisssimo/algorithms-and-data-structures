@@ -1,10 +1,10 @@
 package main
 
 import (
+	bst "algorithms-and-data-structures/DataStructures/TreeStructure/BST"
+	tests "algorithms-and-data-structures/DataStructures/TreeStructure/Tree"
+	tree "algorithms-and-data-structures/DataStructures/TreeStructure/Tree"
 	"fmt"
-	tests "main/Tree"
-	tree "main/Tree"
-	"main/bst"
 )
 
 func testForBST() {
