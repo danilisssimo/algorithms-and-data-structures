@@ -1,24 +1,62 @@
 package tests
 
 import (
-	tree "algorithms-and-data-structures/Algorithms/SearchingAlgorithms/DepthFirstSearch/tree"
+	BFSTree "algorithms-and-data-structures/Algorithms/SearchingAlgorithms/BreadthFirstSearch/tree"
 	tests "algorithms-and-data-structures/DataStructures/TreeStructure/Tree"
 )
 
 type TestCase struct {
-	TreeLink  *tree.Node
+	TreeLink  *BFSTree.Node
 	Searching int
 	Result    bool
 }
 
 var TestCases = []TestCase{
-	{TreeLink: &tree.Node{Node: tests.Tree1}, Searching: 4, Result: true},    // 4 существует в дереве
-	{TreeLink: &tree.Node{Node: tests.Tree1}, Searching: 3, Result: true},    // 3 существует в дереве
-	{TreeLink: &tree.Node{Node: tests.Tree1}, Searching: 6, Result: false},   // 6 не существует в дереве
-	{TreeLink: &tree.Node{Node: tests.Tree2}, Searching: 20, Result: true},   // 20 существует в дереве
-	{TreeLink: &tree.Node{Node: tests.Tree2}, Searching: 10, Result: true},   // 10 (корень) существует в дереве
-	{TreeLink: &tree.Node{Node: tests.Tree2}, Searching: 8, Result: false},   // 8 не существует в дереве
-	{TreeLink: &tree.Node{Node: tests.Tree3}, Searching: 1, Result: false},   // Пустое дерево, ничего не найдено
-	{TreeLink: &tree.Node{Node: tests.Tree4}, Searching: 42, Result: true},   // 42 существует в дереве
-	{TreeLink: &tree.Node{Node: tests.Tree4}, Searching: 100, Result: false}, // 100 не существует в дереве
+	// Tree2
+	{TreeLink: &BFSTree.Node{Node: tests.Tree2}, Searching: 10, Result: true},   // Корень дерева
+	{TreeLink: &BFSTree.Node{Node: tests.Tree2}, Searching: 5, Result: true},    // Левый узел
+	{TreeLink: &BFSTree.Node{Node: tests.Tree2}, Searching: 2, Result: true},    // Левый лист
+	{TreeLink: &BFSTree.Node{Node: tests.Tree2}, Searching: 15, Result: true},   // Правый узел
+	{TreeLink: &BFSTree.Node{Node: tests.Tree2}, Searching: 20, Result: true},   // Правый лист
+	{TreeLink: &BFSTree.Node{Node: tests.Tree2}, Searching: 100, Result: false}, // Несуществующее значение
+
+	// Tree3
+	{TreeLink: &BFSTree.Node{Node: tests.Tree3}, Searching: 1, Result: true},  // Корень дерева
+	{TreeLink: &BFSTree.Node{Node: tests.Tree3}, Searching: 2, Result: true},  // Левый узел
+	{TreeLink: &BFSTree.Node{Node: tests.Tree3}, Searching: 3, Result: true},  // Левый лист
+	{TreeLink: &BFSTree.Node{Node: tests.Tree3}, Searching: 4, Result: true},  // Левый лист
+	{TreeLink: &BFSTree.Node{Node: tests.Tree3}, Searching: 5, Result: true},  // Правый узел
+	{TreeLink: &BFSTree.Node{Node: tests.Tree3}, Searching: 6, Result: true},  // Правый лист
+	{TreeLink: &BFSTree.Node{Node: tests.Tree3}, Searching: 7, Result: true},  // Правый лист
+	{TreeLink: &BFSTree.Node{Node: tests.Tree3}, Searching: 8, Result: false}, // Несуществующее значение
+
+	// Tree4
+	{TreeLink: &BFSTree.Node{Node: tests.Tree4}, Searching: 8, Result: true},  // Корень дерева
+	{TreeLink: &BFSTree.Node{Node: tests.Tree4}, Searching: 3, Result: true},  // Левый узел
+	{TreeLink: &BFSTree.Node{Node: tests.Tree4}, Searching: 1, Result: true},  // Левый лист
+	{TreeLink: &BFSTree.Node{Node: tests.Tree4}, Searching: 6, Result: true},  // Левый лист
+	{TreeLink: &BFSTree.Node{Node: tests.Tree4}, Searching: 10, Result: true}, // Правый узел
+	{TreeLink: &BFSTree.Node{Node: tests.Tree4}, Searching: 9, Result: true},  // Правый лист
+	{TreeLink: &BFSTree.Node{Node: tests.Tree4}, Searching: 14, Result: true}, // Правый лист
+	{TreeLink: &BFSTree.Node{Node: tests.Tree4}, Searching: 0, Result: false}, // Несуществующее значение
+
+	// Tree5
+	{TreeLink: &BFSTree.Node{Node: tests.Tree5}, Searching: 1, Result: true},   // Корень дерева
+	{TreeLink: &BFSTree.Node{Node: tests.Tree5}, Searching: 2, Result: true},   // Левый узел
+	{TreeLink: &BFSTree.Node{Node: tests.Tree5}, Searching: 4, Result: true},   // Левый лист
+	{TreeLink: &BFSTree.Node{Node: tests.Tree5}, Searching: 3, Result: true},   // Правый узел
+	{TreeLink: &BFSTree.Node{Node: tests.Tree5}, Searching: 5, Result: true},   // Правый лист
+	{TreeLink: &BFSTree.Node{Node: tests.Tree5}, Searching: 10, Result: false}, // Несуществующее значение
+
+	// Tree6
+	{TreeLink: &BFSTree.Node{Node: tests.Tree6}, Searching: 1, Result: true},  // Корень дерева
+	{TreeLink: &BFSTree.Node{Node: tests.Tree6}, Searching: 2, Result: true},  // Левый узел
+	{TreeLink: &BFSTree.Node{Node: tests.Tree6}, Searching: 4, Result: true},  // Левый лист
+	{TreeLink: &BFSTree.Node{Node: tests.Tree6}, Searching: 5, Result: true},  // Левый лист
+	{TreeLink: &BFSTree.Node{Node: tests.Tree6}, Searching: 3, Result: true},  // Правый узел
+	{TreeLink: &BFSTree.Node{Node: tests.Tree6}, Searching: 6, Result: false}, // Несуществующее значение
+
+	// Tree8 (пустое дерево)
+	{TreeLink: &BFSTree.Node{Node: tests.Tree8}, Searching: 1, Result: false}, // Пустое дерево
+
 }
