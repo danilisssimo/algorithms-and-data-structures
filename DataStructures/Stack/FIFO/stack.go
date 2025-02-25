@@ -11,7 +11,7 @@ type Queue struct {
 	nextFreePlaceIndex int
 }
 
-// Dequeue delete and return first element of stack
+// Dequeue delete and return first element of queue
 func (queue *Queue) Dequeue() interface{} {
 	if queue.length <= 0 {
 		return errors.New("Queue is null")
@@ -23,7 +23,7 @@ func (queue *Queue) Dequeue() interface{} {
 	return result
 }
 
-// Enqueue append first element of stack
+// Enqueue append element to last position of queue
 func (queue *Queue) Enqueue(el interface{}) {
 	if queue.nextFreePlaceIndex >= queue.length {
 		queue.length++
