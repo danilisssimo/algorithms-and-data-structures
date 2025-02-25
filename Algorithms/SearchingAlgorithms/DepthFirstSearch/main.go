@@ -6,8 +6,18 @@ import (
 )
 
 func main() {
-	for index, test := range tests.TestCases {
-		result := test.TreeLink.FindNode(test.Searching)
-		fmt.Printf("Test num: %d, My result: %+v, TestCase result: %t\n", index+1, result, test.Result)
+	testsForSearchingNode(tests.TestCases)
+}
+
+func testsForSearchingNode(tests []tests.TestCase) {
+	for index, test := range tests {
+		funcResult := test.TreeLink.FindNode(test.Searching)
+		fmt.Printf(
+			"Test num: %d, IsNodeExist: %t, SearchingNodeValue: %d, FuncResult: %+v\n",
+			index+1,
+			test.Result,
+			test.Searching,
+			funcResult,
+		)
 	}
 }
