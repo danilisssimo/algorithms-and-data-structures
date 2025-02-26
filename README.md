@@ -52,15 +52,15 @@
 - ✅ [Линейный поиск (Linear Search)](/Algorithms/SearchingAlgorithms/LinearSearch/README.md)  
 - ✅ [Бинарный поиск (Binary Search)](/Algorithms/SearchingAlgorithms/BinarySearch/README.md)  
 - ✅ [Поиск в глубину (Depth-First Search)](/Algorithms/SearchingAlgorithms/DepthFirstSearch/README.md)  
-- ⏳ Поиск в ширину (Breadth-First Search)
+- ✅ [Поиск в ширину (Breadth-First Search)](/Algorithms/SearchingAlgorithms/BreadthFirstSearch/README.md)
 
 ### 🏗 Структуры данных (Data Structures) 
 
 #### 🌲 Деревья и графы
-- ⏳ [Двоичное дерево поиска (Binary Search Tree, BST)](/DataStructures/Tree/BinaryTree/)
+- ✅ [Двоичное дерево поиска (Binary Search Tree, BST)](/DataStructures/TreeStructure/BST/README.md)
 
 #### Стопки (Stack)
-- ⏳ FIFO (First In First Out)
+- ✅ [FIFO (First In First Out)](/DataStructures/Stack/FIFO/README.md)
 
 
 📢 **Планы**: В дальнейшем я добавлю больше алгоритмов, включая жадные алгоритмы, динамическое программирование, теорию графов и другие важные концепции.
