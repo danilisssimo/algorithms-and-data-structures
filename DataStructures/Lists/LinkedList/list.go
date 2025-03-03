@@ -16,7 +16,6 @@ type List struct {
 	length   int
 }
 
-// May be wrong
 func (list *List) Append(value interface{}) {
 	node := &ListNode{
 		Data: value, NextLink: nil,
@@ -31,14 +30,14 @@ func (list *List) Append(value interface{}) {
 	list.length++
 }
 
-// May be wrong
 func (list *List) Prepend(value interface{}) {
 	node := &ListNode{Data: value, NextLink: list.HeadLink}
 	if list.HeadLink == nil {
 		list.HeadLink = node
 		list.TailLink = node
 	} else {
-		list.TailLink.NextLink = node
+		node.NextLink = list.HeadLink
+		list.HeadLink = node
 	}
 	list.length++
 }
