@@ -48,6 +48,7 @@ func (list *List) RemoveFirst() (*ListNode, error) {
 	}
 	linkToNode := list.HeadLink
 	list.HeadLink = list.HeadLink.NextLink
+	list.length--
 	return linkToNode, nil
 }
 
@@ -70,6 +71,7 @@ func (list *List) Remove(position int) (*ListNode, error) {
 		removedNode.NextLink = nil // delete link to next node
 	}
 	node.NextLink = nextNodeLink // previous node to delete
+	list.length--
 	return removedNode, nil
 }
 
