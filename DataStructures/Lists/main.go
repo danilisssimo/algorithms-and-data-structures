@@ -9,8 +9,10 @@ func main() {
 }
 
 func testForLinkedList() {
-	linkedlist.List1.Draw()
-	linkedlist.List2.Draw()
-	linkedlist.List3.Draw()
-	linkedlist.List4.Draw()
+	var newList *linkedlist.List = linkedlist.CreateLinkedList([]interface{}{})
+	newList.Append("Hello")
+	newList.Append("World")
+	newList.Append("!")
+	newList.Append(677)
+	newList.Draw()
 }
