@@ -22,7 +22,14 @@ func CreateLinkedList(slice []interface{}) *List {
 	}
 }
 
+// [1, 2, 3, 4, 5, 6, 7, 8, 9]
 var List1 *List = CreateLinkedList([]interface{}{1, 2, 3, 4, 5, 6, 7, 8, 9})
+
+// [15245, 16549879, 651987987, 6549844984, 65498767, 14897987, 875138, 498428]
 var List2 *List = CreateLinkedList([]interface{}{15245, 16549879, 651987987, 6549844984, 65498767, 14897987, 875138, 498428})
+
+// [42]
 var List3 *List = CreateLinkedList([]interface{}{42})
+
+// empty
 var List4 *List = CreateLinkedList([]interface{}{})
