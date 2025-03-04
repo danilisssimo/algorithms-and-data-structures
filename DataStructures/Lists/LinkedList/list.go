@@ -139,6 +139,8 @@ func (list *List) RemoveFirst() (*ListNode, error) {
 	return linkToNode, nil
 }
 
+func (list *List) Reverse() {}
+
 func (list *List) GetLength() int {
 	return list.length
 }
