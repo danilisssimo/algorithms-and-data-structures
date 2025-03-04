@@ -8,6 +8,8 @@ import (
 func main() {
 	testForLinkedList()
 	testPrependForLinkedList()
+	testRemoveFirstForLinkedList()
+	fmt.Println("--TEST FOR REMOVING--")
 	testRemoveForLinkedList()
 }
 
@@ -29,7 +31,7 @@ func testPrependForLinkedList() {
 	newList.Draw()
 }
 
-func testRemoveForLinkedList() {
+func testRemoveFirstForLinkedList() {
 	var newList *linkedlist.List = linkedlist.List1
 	newList.Draw()
 	fmt.Println("Delete 1")
@@ -41,4 +43,29 @@ func testRemoveForLinkedList() {
 	newList.RemoveFirst()
 	newList.RemoveFirst()
 	newList.Draw()
+}
+
+func testRemoveForLinkedList() {
+	var newList *linkedlist.List = linkedlist.List2
+	newList.Draw()
+	fmt.Println("Delete last")
+	newList.Remove(7)
+	newList.Draw()
+	fmt.Println("Delete 3th")
+	newList.Remove(3)
+	newList.Draw()
+	fmt.Println("Delete first")
+	newList.Remove(0)
+	newList.Draw()
+	newList = linkedlist.List3
+	newList.Draw()
+	newList.Remove(0)
+	newList.Draw()
+
+	newList = linkedlist.List4
+	newList.Draw()
+	_, err := newList.Remove(3)
+	if err != nil {
+		fmt.Println(err)
+	}
 }
