@@ -11,6 +11,12 @@ func main() {
 	testRemoveFirstForLinkedList()
 	fmt.Println("--TEST FOR REMOVING--")
 	testRemoveForLinkedList()
+	fmt.Println("-- TEST FOR FINDING --")
+	testFindForLinkedList()
+	fmt.Println("-- TEST FOR GET AT --")
+	testGetAtForLinkedList()
+	fmt.Println("-- TEST FOR INSERT AT --")
+	testInsertAtForLinkedList()
 }
 
 func testForLinkedList() {
@@ -67,5 +73,49 @@ func testRemoveForLinkedList() {
 	_, err := newList.Remove(3)
 	if err != nil {
 		fmt.Println(err)
+	}
+}
+
+func testFindForLinkedList() {
+	var newList *linkedlist.List = linkedlist.CreateLinkedList([]interface{}{1, 4, 3, 6, 7, 8, 9, 12, 43, 5, 2, 6})
+	node, res := newList.Find(12)
+	fmt.Printf("Node: %+v, Result: %t\n", node, res)
+	node, res = newList.Find(0)
+	fmt.Printf("Node: %+v, Result: %t\n", node, res)
+}
+
+func testGetAtForLinkedList() {
+	var newList *linkedlist.List = linkedlist.CreateLinkedList([]interface{}{1, 4, 3, 6, 7, 8, 9, 12, 43, 5, 2, 6})
+	node, err := newList.GetAt(3)
+	fmt.Printf("Node: %+v, Err: %+v\n", node, err)
+	node, err = newList.GetAt(-1)
+	fmt.Printf("Node: %+v, Err: %+v\n", node, err)
+	node, err = newList.GetAt(40)
+	fmt.Printf("Node: %+v, Err: %+v\n", node, err)
+	node, err = newList.GetAt(0)
+	fmt.Printf("Node: %+v, Err: %+v\n", node, err)
+	node, err = newList.GetAt(11)
+	fmt.Printf("Node: %+v, Err: %+v\n", node, err)
+}
+
+func testInsertAtForLinkedList() {
+	var newList *linkedlist.List = linkedlist.CreateLinkedList([]interface{}{1, 4, 3, 6, 7, 8, 9, 12, 43, 5, 2, 6})
+	err := newList.InsertAt(2, "New value")
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		newList.Draw()
+	}
+	err = newList.InsertAt(-1, 10)
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		newList.Draw()
+	}
+	err = newList.InsertAt(50, 99)
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		newList.Draw()
 	}
 }
