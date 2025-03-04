@@ -42,14 +42,65 @@ func (list *List) Prepend(value interface{}) {
 	list.length++
 }
 
-func (list *List) RemoveFirst() (*ListNode, error) {
-	if list.length == 0 {
-		return nil, errors.New("list is empty")
+func (list *List) Find(value interface{}) (*ListNode, bool) {
+	if list.TailLink.Data == value {
+		return list.TailLink, true
 	}
-	linkToNode := list.HeadLink
-	list.HeadLink = list.HeadLink.NextLink
-	list.length--
-	return linkToNode, nil
+	var node *ListNode = list.HeadLink
+	var currentNodeIndex int = 0
+	for currentNodeIndex <= list.length-1 {
+		if node.Data == value {
+			return node, true
+		}
+		node = node.NextLink
+		currentNodeIndex++
+	}
+	return nil, false
+}
+
+func (list *List) InsertAt(position int, value interface{}) error {
+	if list.length <= position || 0 > position {
+		return fmt.Errorf("position %d is outside of this list", position)
+	}
+	if position == 0 {
+		list.Prepend(value)
+		return nil
+	}
+	if position == list.length-1 {
+		list.Append(value)
+		return nil
+	}
+	var newNode *ListNode = &ListNode{Data: value}
+	var node *ListNode = list.HeadLink
+	var currentNodeIndex int = 0
+	for currentNodeIndex != position-1 {
+		node = node.NextLink
+		currentNodeIndex++
+	}
+	nextNode := node.NextLink
+	node.NextLink = newNode
+	newNode.NextLink = nextNode
+	list.length++
+	return nil
+}
+
+func (list *List) GetAt(position int) (*ListNode, error) {
+	if list.length <= position || 0 > position {
+		return nil, errors.New("no element in this position")
+	}
+	if position == 0 {
+		return list.HeadLink, nil
+	}
+	if position == list.length-1 {
+		return list.TailLink, nil
+	}
+	var node *ListNode = list.HeadLink
+	var currentNodeIndex int = 0
+	for currentNodeIndex != position {
+		node = node.NextLink
+		currentNodeIndex++
+	}
+	return node, nil
 }
 
 func (list *List) Remove(position int) (*ListNode, error) {
@@ -76,6 +127,16 @@ func (list *List) Remove(position int) (*ListNode, error) {
 	node.NextLink = nextNodeLink // previous node to delete
 	list.length--
 	return removedNode, nil
+}
+
+func (list *List) RemoveFirst() (*ListNode, error) {
+	if list.length == 0 {
+		return nil, errors.New("list is empty")
+	}
+	linkToNode := list.HeadLink
+	list.HeadLink = list.HeadLink.NextLink
+	list.length--
+	return linkToNode, nil
 }
 
 func (list *List) GetLength() int {
