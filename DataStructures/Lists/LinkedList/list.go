@@ -56,6 +56,9 @@ func (list *List) Remove(position int) (*ListNode, error) {
 	if list.length <= position {
 		return nil, errors.New("no element in this position")
 	}
+	if position == 0 {
+		return list.RemoveFirst()
+	}
 	var node *ListNode = list.HeadLink
 	var currentNodeIndex int = 0
 	for currentNodeIndex != position-1 {
