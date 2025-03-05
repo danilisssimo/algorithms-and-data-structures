@@ -40,30 +40,85 @@
 
 Этот список содержит алгоритмы, которые я изучил и реализовал. Он будет регулярно пополняться по мере моего обучения. Каждый алгоритм сопровождается описанием и разбором в соответствующем разделе.  
 
-### Сортировка (Sorting Algorithms)  
+---
+
+### 📌 Сортировка (Sorting Algorithms)  
 - ✅ [Сортировка вставками (Insertion Sort)](/Algorithms/SortingAlgorithms/insertionSort/README.md)  
 - ✅ [Сортировка слиянием (Merge Sort)](/Algorithms/SortingAlgorithms/mergeSort/README.md)  
 - ✅ [Сортировка выбором (Selection Sort)](/Algorithms/SortingAlgorithms/selectionSort/README.md)  
 - ✅ [Быстрая сортировка (Quick Sort)](/Algorithms/SortingAlgorithms/quickSort/README.md)  
-- ⏳ Timsort (в процессе)  
-- ⏳ Сортировка кучей (Heap Sort)  
+- ⏳ [Timsort](#)
+- ⏳ [Сортировка кучей (Heap Sort)](#)  
+- ⏳ [Сортировка подсчетом (Counting Sort)](#)  
+- ⏳ [Сортировка Шелла (Shell Sort)](#)  
+- ⏳ [Поразрядная сортировка (Radix Sort)](#)  
 
-### Поиск (Searching Algorithms)  
+---
+
+### 🔎 Поиск (Searching Algorithms)  
 - ✅ [Линейный поиск (Linear Search)](/Algorithms/SearchingAlgorithms/LinearSearch/README.md)  
 - ✅ [Бинарный поиск (Binary Search)](/Algorithms/SearchingAlgorithms/BinarySearch/README.md)  
 - ✅ [Поиск в глубину (Depth-First Search)](/Algorithms/SearchingAlgorithms/DepthFirstSearch/README.md)  
-- ✅ [Поиск в ширину (Breadth-First Search)](/Algorithms/SearchingAlgorithms/BreadthFirstSearch/README.md)
+- ✅ [Поиск в ширину (Breadth-First Search)](/Algorithms/SearchingAlgorithms/BreadthFirstSearch/README.md)  
+- ⏳ [Интерполяционный поиск (Interpolation Search)](#)  
+- ⏳ [Экспоненциальный поиск (Exponential Search)](#)  
+- ⏳ [Тернарный поиск (Ternary Search)](#)  
+- ⏳ [Jump Search (поиск прыжками)](#)  
+
+---
+
+### 📊 Алгоритмы на графах (Graph Algorithms)  
+- ⏳ [Алгоритм Дейкстры (Dijkstra's Algorithm)](#)  
+- ⏳ [Алгоритм Флойда-Уоршелла (Floyd-Warshall Algorithm)](#)  
+- ⏳ [Алгоритм Беллмана-Форда (Bellman-Ford Algorithm)](#)  
+- ⏳ [Алгоритм Прима (Prim's Algorithm)](#)  
+- ⏳ [Алгоритм Крускала (Kruskal's Algorithm)](#)  
+- ⏳ [Топологическая сортировка (Topological Sorting)](#)  
+
+---
 
 ### 🏗 Структуры данных (Data Structures) 
 
 #### 🌲 Деревья и графы
-- ✅ [Двоичное дерево поиска (Binary Search Tree, BST)](/DataStructures/TreeStructure/BST/README.md)
+- ✅ [Двоичное дерево поиска (Binary Search Tree, BST)](/DataStructures/TreeStructure/BST/README.md)  
+- ⏳ [Красно-черное дерево (Red-Black Tree)](#)  
+- ⏳ [АВЛ-дерево (AVL Tree)](#)  
+- ⏳ [Куча (Heap)](#)  
+- ⏳ [B-дерево (B-Tree)](#)  
+- ⏳ [Trie (префиксное дерево)](#)  
+- ⏳ [Хэш-таблица (Hash Table)](#)  
 
-#### Стопки (Stack)
-- ✅ [FIFO (First In First Out)](/DataStructures/Stack/FIFO/README.md)
+#### 🗂 Очереди (Queues)
+- ✅ [FIFO (First In First Out)](/DataStructures/Queue/FIFO/README.md)  
+- ⏳ [Очередь с приоритетом (Priority Queue)](#)  
+- ⏳ [Двусторонняя очередь (Deque)](#)  
 
-#### Списки (Lists)
-- ✅ [Связный список (Linked List)](/DataStructures/Lists/LinkedList/README.md)
+#### 📜 Списки (Lists)
+- ✅ [Связный список (Linked List)](/DataStructures/Lists/LinkedList/README.md)  
+- ⏳ [Двусвязный список (Doubly Linked List)](#)  
+- ⏳ [Кольцевой связный список (Circular Linked List)](#)  
 
+#### 🔢 Стек (Stack)
+- ✅ [LIFO (Last In First Out)](/DataStructures/Stack/LIFO/README.md)  
+- ⏳ [Реализация стека через массив (Array-based Stack)](#)  
+- ⏳ [Реализация стека через связный список (Linked List-based Stack)](#)  
+
+---
+
+### 🔢 Числовые алгоритмы (Number Theory Algorithms)
+- ⏳ [Алгоритм Евклида (Greatest Common Divisor - GCD)](#)  
+- ⏳ [Решето Эратосфена (Sieve of Eratosthenes)](#)  
+- ⏳ [Быстрое возведение в степень (Fast Exponentiation)](#)  
+- ⏳ [Модульное возведение в степень (Modular Exponentiation)](#)  
+- ⏳ [Разложение числа на простые множители (Prime Factorization)](#)  
+
+---
+
+### 🔐 Алгоритмы хеширования (Hashing Algorithms)
+- ⏳ [Хеш-функция (Hash Function)](#)  
+- ⏳ [Метод цепочек (Chaining Method)](#)  
+- ⏳ [Метод открытой адресации (Open Addressing)](#)  
+
+---
 
 📢 **Планы**: В дальнейшем я добавлю больше алгоритмов, включая жадные алгоритмы, динамическое программирование, теорию графов и другие важные концепции.
