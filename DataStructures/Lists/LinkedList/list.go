@@ -139,7 +139,20 @@ func (list *List) RemoveFirst() (*ListNode, error) {
 	return linkToNode, nil
 }
 
-func (list *List) Reverse() {}
+func (list *List) Reverse() {
+	var currentNodeIndex int = 0
+	newTailLink := list.HeadLink
+	node := list.HeadLink
+	for node.NextLink != nil {
+		newPrevLink := node.NextLink         // save new prev node
+		newNextLink := newPrevLink.NextLink  // save new next node
+		newPrevLink.NextLink = list.HeadLink // create link from new prev to current head node
+		list.HeadLink = newPrevLink          // create new link to Head
+		node.NextLink = newNextLink          // create link from current to next node
+		currentNodeIndex++
+	}
+	list.TailLink = newTailLink
+}
 
 func (list *List) GetLength() int {
 	return list.length
