@@ -17,6 +17,8 @@ func main() {
 	testGetAtForLinkedList()
 	fmt.Println("-- TEST FOR INSERT AT --")
 	testInsertAtForLinkedList()
+	fmt.Println("-- TEST FOR REVERSE --")
+	testForReverse()
 }
 
 func testForLinkedList() {
@@ -118,4 +120,15 @@ func testInsertAtForLinkedList() {
 	} else {
 		newList.Draw()
 	}
+}
+
+func testForReverse() {
+	var newList *linkedlist.List = linkedlist.CreateLinkedList([]interface{}{1, 2, 3, 4, 5})
+	newList.Draw()
+	newList.Reverse()
+	newList.Draw()
+	newList = linkedlist.CreateLinkedList([]interface{}{589, 569, 21, 654, 486, 1687, 547, 32, 11, 20, 18})
+	newList.Draw()
+	newList.Reverse()
+	newList.Draw()
 }
