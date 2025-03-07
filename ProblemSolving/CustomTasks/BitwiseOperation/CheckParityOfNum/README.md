@@ -23,10 +23,8 @@
 <p>&nbsp;</p>
 <p><strong class="example">Пример 1:</strong></p>
 <pre><strong>Вход:</strong> number = 6
-<strong>Выход:</strong> true
-</pre>
+<strong>Выход:</strong> true</pre>
 <p>&nbsp;</p>
 <p><strong class="example">Пример 2:</strong></p>
 <pre><strong>Вход:</strong> number = 6473
-<strong>Выход:</strong> false
-</pre>
+<strong>Выход:</strong> false</pre>
