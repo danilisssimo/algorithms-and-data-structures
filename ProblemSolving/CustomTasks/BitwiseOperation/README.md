@@ -16,5 +16,5 @@
 
 ## Задачи
 
-- ⏳ [Проверка четности числа](./CheckParityOfNum/README.md)
-- ⏳ [Умножение на 2](#)
+- ✅ [Проверка четности числа](./CheckParityOfNum/README.md)
+- ✅ [Умножение на 2](./MultiplicationBy2/README.md)
