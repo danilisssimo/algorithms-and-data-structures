@@ -5,6 +5,7 @@ import (
 	divisionby2 "algorithms-and-data-structures/ProblemSolving/CustomTasks/BitwiseOperation/DivisionBy2"
 	invertingthebits "algorithms-and-data-structures/ProblemSolving/CustomTasks/BitwiseOperation/InvertingTheBits"
 	multiplicationby2 "algorithms-and-data-structures/ProblemSolving/CustomTasks/BitwiseOperation/MultiplicationBy2"
+	thepoweroftwo "algorithms-and-data-structures/ProblemSolving/CustomTasks/BitwiseOperation/ThePowerOfTwo"
 	"algorithms-and-data-structures/ProblemSolving/CustomTasks/BitwiseOperation/utils"
 	"fmt"
 )
@@ -14,6 +15,7 @@ func main() {
 	testForMultiplicationBy2()
 	testForDivisionBy2()
 	testForInvertingTheBits()
+	testForThePowerOfTwo()
 }
 
 func testForCheckParityOfNum() {
@@ -48,5 +50,13 @@ func testForInvertingTheBits() {
 		utils.PrintAsBinary(data)
 		fmt.Printf("Res: ")
 		utils.PrintAsBinary(invertingthebits.Solution(data))
+	}
+}
+
+func testForThePowerOfTwo() {
+	fmt.Println("--- TEST FOR THE POWER OF TWO ---")
+	var tests []int = []int{1, 3, 5, 2, 6, 8}
+	for _, data := range tests {
+		fmt.Printf("Num: %d, Result: %t;\n", data, thepoweroftwo.Solution(data))
 	}
 }
