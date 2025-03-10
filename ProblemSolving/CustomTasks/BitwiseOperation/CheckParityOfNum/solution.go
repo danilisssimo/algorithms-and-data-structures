@@ -1,5 +1,5 @@
 package checkparityofnum
 
-func Solving(number int) bool {
+func Solution(number int) bool {
 	return number&1 == 0
 }

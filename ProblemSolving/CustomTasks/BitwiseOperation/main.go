@@ -15,7 +15,7 @@ func testForCheckParityOfNum() {
 	fmt.Println("--- TEST FOR CHECK PARITY OF NUMBER ---")
 	var tests []int = []int{1, 3, 5, 2, 6, 8}
 	for _, data := range tests {
-		fmt.Printf("Num: %d, Result: %t;\n", data, checkparityofnum.Solving(data))
+		fmt.Printf("Num: %d, Result: %t;\n", data, checkparityofnum.Solution(data))
 	}
 }
 
@@ -23,6 +23,6 @@ func testForMultiplicationBy2() {
 	fmt.Println("--- TEST FOR MULTIOLICATION BY 2 ---")
 	var tests []int = []int{1, 3, 5, 2, 6, 8}
 	for _, data := range tests {
-		fmt.Printf("Num: %d, Result: %d;\n", data, multiplicationby2.Solving(data))
+		fmt.Printf("Num: %d, Result: %d;\n", data, multiplicationby2.Solution(data))
 	}
 }
