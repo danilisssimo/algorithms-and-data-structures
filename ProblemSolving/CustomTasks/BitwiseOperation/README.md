@@ -20,8 +20,8 @@
 - ✅ [Проверка четности числа](./CheckParityOfNum/README.md)
 - ✅ [Умножение на 2](./MultiplicationBy2/README.md)
 - ✅ [Деление на 2](./DivisionBy2/README.md)
-- ⏳ [Инвертирование битов](./InvertingTheBits/README.md)
-- ⏳ [Проверка, является ли число степенью двойки](./ThePowerOfTwo/README.md)
+- ✅ [Инвертирование битов](./InvertingTheBits/README.md)
+- ✅ [Проверка, является ли число степенью двойки](./ThePowerOfTwo/README.md)
 
 ### Средние
 - ⏳ [Подсчёт количества единичных битов](./SingleBitCount/README.md)
