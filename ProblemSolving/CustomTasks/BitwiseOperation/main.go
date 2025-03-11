@@ -5,6 +5,8 @@ import (
 	divisionby2 "algorithms-and-data-structures/ProblemSolving/CustomTasks/BitwiseOperation/DivisionBy2"
 	invertingthebits "algorithms-and-data-structures/ProblemSolving/CustomTasks/BitwiseOperation/InvertingTheBits"
 	multiplicationby2 "algorithms-and-data-structures/ProblemSolving/CustomTasks/BitwiseOperation/MultiplicationBy2"
+	settingandresettingbit "algorithms-and-data-structures/ProblemSolving/CustomTasks/BitwiseOperation/SettingAndResettingBit"
+	singlebitcount "algorithms-and-data-structures/ProblemSolving/CustomTasks/BitwiseOperation/SingleBitCount"
 	thepoweroftwo "algorithms-and-data-structures/ProblemSolving/CustomTasks/BitwiseOperation/ThePowerOfTwo"
 	"algorithms-and-data-structures/ProblemSolving/CustomTasks/BitwiseOperation/utils"
 	"fmt"
@@ -16,6 +18,8 @@ func main() {
 	testForDivisionBy2()
 	testForInvertingTheBits()
 	testForThePowerOfTwo()
+	testForSingleBitCount()
+	testForSettingAndResettingBit()
 }
 
 func testForCheckParityOfNum() {
@@ -58,5 +62,21 @@ func testForThePowerOfTwo() {
 	var tests []int = []int{1, 3, 5, 2, 6, 8}
 	for _, data := range tests {
 		fmt.Printf("Num: %d, Result: %t;\n", data, thepoweroftwo.Solution(data))
+	}
+}
+
+func testForSingleBitCount() {
+	fmt.Println("--- TEST FOR SINGLE BIT COUNT ---")
+	var tests []int = []int{33, 12, 9, 34, 0, 4, 321, 8123849123}
+	for _, data := range tests {
+		fmt.Printf("Num: %b, Result:%d;\n", data, singlebitcount.Solution(data))
+	}
+}
+
+func testForSettingAndResettingBit() {
+	fmt.Println("--- TEST FOR SETTING AND RESETTING BIT ---")
+	var tests []int = []int{33, 12, 9, 34, 4, 321, 8123849123}
+	for _, data := range tests {
+		fmt.Printf("Num: %b, Result:%b;\n", data, settingandresettingbit.Solution(data, 3, true))
 	}
 }
