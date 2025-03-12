@@ -75,8 +75,14 @@ func testForSingleBitCount() {
 
 func testForSettingAndResettingBit() {
 	fmt.Println("--- TEST FOR SETTING AND RESETTING BIT ---")
-	var tests []int = []int{33, 12, 9, 34, 4, 321, 8123849123}
-	for _, data := range tests {
+	var testsForSet []int = []int{33, 12, 9, 34, 4, 321, 8123849123}
+	fmt.Println("-- test for set bit --")
+	for _, data := range testsForSet {
 		fmt.Printf("Num: %b, Result:%b;\n", data, settingandresettingbit.Solution(data, 3, true))
+	}
+	var testsForReset []int = []int{15, 45, 37, 20, 4, 2228, 1810438}
+	fmt.Println("-- test for reset bit --")
+	for _, data := range testsForReset {
+		fmt.Printf("Num: %b, Result:%b;\n", data, settingandresettingbit.Solution(data, 2, false))
 	}
 }
