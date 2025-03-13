@@ -24,3 +24,7 @@
 <pre><strong>Вход:</strong> a = 3, b = 5
 <strong>Выход:</strong> a = 5, b = 3
 </pre>
+
+## Полезные ресурсы
+
+- [XOR-обмен](https://ru.wikipedia.org/wiki/XOR-обмен)
