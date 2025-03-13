@@ -7,6 +7,7 @@ import (
 	multiplicationby2 "algorithms-and-data-structures/ProblemSolving/CustomTasks/BitwiseOperation/MultiplicationBy2"
 	settingandresettingbit "algorithms-and-data-structures/ProblemSolving/CustomTasks/BitwiseOperation/SettingAndResettingBit"
 	singlebitcount "algorithms-and-data-structures/ProblemSolving/CustomTasks/BitwiseOperation/SingleBitCount"
+	swap2varible "algorithms-and-data-structures/ProblemSolving/CustomTasks/BitwiseOperation/Swap2Varible"
 	thepoweroftwo "algorithms-and-data-structures/ProblemSolving/CustomTasks/BitwiseOperation/ThePowerOfTwo"
 	"algorithms-and-data-structures/ProblemSolving/CustomTasks/BitwiseOperation/utils"
 	"fmt"
@@ -20,6 +21,7 @@ func main() {
 	testForThePowerOfTwo()
 	testForSingleBitCount()
 	testForSettingAndResettingBit()
+	testForSwap2Varible()
 }
 
 func testForCheckParityOfNum() {
@@ -84,5 +86,14 @@ func testForSettingAndResettingBit() {
 	fmt.Println("-- test for reset bit --")
 	for _, data := range testsForReset {
 		fmt.Printf("Num: %b, Result:%b;\n", data, settingandresettingbit.Solution(data, 2, false))
+	}
+}
+
+func testForSwap2Varible() {
+	fmt.Println("--- TEST FOR SWAP 2 VARIBLES ---")
+	var tests [][]int = [][]int{[]int{33, 12}, []int{15, 45}, []int{11, 91}, []int{67, 12}, []int{90, 80}, []int{14, 43}}
+	for _, data := range tests {
+		a, b := swap2varible.Solution(data[0], data[1])
+		fmt.Printf("Num: %+v, Result:[%d %d];\n", data, a, b)
 	}
 }
