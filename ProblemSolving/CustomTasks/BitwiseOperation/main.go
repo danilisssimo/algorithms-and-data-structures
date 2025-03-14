@@ -3,6 +3,7 @@ package main
 import (
 	checkparityofnum "algorithms-and-data-structures/ProblemSolving/CustomTasks/BitwiseOperation/CheckParityOfNum"
 	divisionby2 "algorithms-and-data-structures/ProblemSolving/CustomTasks/BitwiseOperation/DivisionBy2"
+	finduniquenum "algorithms-and-data-structures/ProblemSolving/CustomTasks/BitwiseOperation/FindUniqueNum"
 	invertingthebits "algorithms-and-data-structures/ProblemSolving/CustomTasks/BitwiseOperation/InvertingTheBits"
 	multiplicationby2 "algorithms-and-data-structures/ProblemSolving/CustomTasks/BitwiseOperation/MultiplicationBy2"
 	settingandresettingbit "algorithms-and-data-structures/ProblemSolving/CustomTasks/BitwiseOperation/SettingAndResettingBit"
@@ -22,6 +23,7 @@ func main() {
 	testForSingleBitCount()
 	testForSettingAndResettingBit()
 	testForSwap2Varible()
+	testForFindUniqueNum()
 }
 
 func testForCheckParityOfNum() {
@@ -95,5 +97,21 @@ func testForSwap2Varible() {
 	for _, data := range tests {
 		a, b := swap2varible.Solution(data[0], data[1])
 		fmt.Printf("Num: %+v, Result:[%d %d];\n", data, a, b)
+	}
+}
+
+func testForFindUniqueNum() {
+	fmt.Println("--- TEST FOR SWAP 2 VARIBLES ---")
+	var tests [][]int = [][]int{
+		{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9}, // 10 встречается один раз
+		{10, 20, 30, 40, 50, 10, 20, 30, 40},                       // 50 встречается один раз
+		{7, 3, 5, 3, 7},                                            // 5 встречается один раз
+		{1, 1, 2, 2, 3, 3, 4, 4, 5},                                // 5 встречается один раз
+		{42},                                                       // 42 встречается один раз (массив из одного элемента)
+		{100, 200, 300, 100, 200},                                  // 300 встречается один раз
+	}
+	for _, data := range tests {
+		res := finduniquenum.Solution(data)
+		fmt.Printf("Num: %+v, Result: %d;\n", data, res)
 	}
 }
