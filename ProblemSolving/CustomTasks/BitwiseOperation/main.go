@@ -95,7 +95,7 @@ func testForSettingAndResettingBit() {
 
 func testForSwap2Varible() {
 	fmt.Println("--- TEST FOR SWAP 2 VARIBLES ---")
-	var tests [][]int = [][]int{[]int{33, 12}, []int{15, 45}, []int{11, 91}, []int{67, 12}, []int{90, 80}, []int{14, 43}}
+	var tests [][]int = [][]int{{33, 12}, {15, 45}, {11, 91}, {67, 12}, {90, 80}, {14, 43}}
 	for _, data := range tests {
 		a, b := swap2varible.Solution(data[0], data[1])
 		fmt.Printf("Num: %+v, Result:[%d %d];\n", data, a, b)
