@@ -1,6 +1,7 @@
 package main
 
 import (
+	checkbit "algorithms-and-data-structures/ProblemSolving/CustomTasks/BitwiseOperation/CheckBit"
 	checkparityofnum "algorithms-and-data-structures/ProblemSolving/CustomTasks/BitwiseOperation/CheckParityOfNum"
 	divisionby2 "algorithms-and-data-structures/ProblemSolving/CustomTasks/BitwiseOperation/DivisionBy2"
 	finduniquenum "algorithms-and-data-structures/ProblemSolving/CustomTasks/BitwiseOperation/FindUniqueNum"
@@ -24,6 +25,7 @@ func main() {
 	testForSettingAndResettingBit()
 	testForSwap2Varible()
 	testForFindUniqueNum()
+	testForCheckBit()
 }
 
 func testForCheckParityOfNum() {
@@ -113,5 +115,13 @@ func testForFindUniqueNum() {
 	for _, data := range tests {
 		res := finduniquenum.Solution(data)
 		fmt.Printf("Num: %+v, Result: %d;\n", data, res)
+	}
+}
+
+func testForCheckBit() {
+	fmt.Println("--- TEST FOR CHECK BIT ---")
+	var tests []int = []int{33, 12, 9, 34, 0, 4, 321, 8123849123}
+	for _, data := range tests {
+		fmt.Printf("Num: %b %d, Result: %t;\n", data, 1, checkbit.Solution(data, 1))
 	}
 }
