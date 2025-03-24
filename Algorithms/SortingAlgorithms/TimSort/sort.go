@@ -19,50 +19,37 @@ func Sorted(slice []int) []int {
 		index += minRun
 	}
 
-	sortedSubSliceEndIndex := 0
-	// Somethink wrong with merge
-	for sortedSubSliceEndIndex < sliceLen {
-		nextEndSubSliceIndex := sortedSubSliceEndIndex + minRun
+	// Need to save between result
+	for sliceSize := minRun; sliceSize < sliceLen; sliceSize += minRun {
+		nextEndSubSliceIndex := sliceSize + minRun
 		if nextEndSubSliceIndex > sliceLen {
 			nextEndSubSliceIndex = sliceLen
 		}
-		leftSliceLen := sortedSubSliceEndIndex
-		rightSliceLen := nextEndSubSliceIndex - sortedSubSliceEndIndex
-		leftIndex := sortedSubSliceEndIndex
-		rightIndex := leftSliceLen
 
-		for leftSliceLen+rightSliceLen > leftIndex+rightIndex {
-			if rightIndex >= rightSliceLen || (leftIndex < leftSliceLen && slice[leftIndex] <= slice[rightIndex]) {
-				sortedSlice[leftIndex+rightIndex] = slice[leftIndex]
-				leftIndex++
+		leftSliceIndex, rightSliceIndex := 0, sliceSize
+		fmt.Printf("\n%d %d\n", sliceSize, nextEndSubSliceIndex)
+		fmt.Printf("\n%+v\n%+v\n", slice[0:sliceSize], slice[sliceSize:nextEndSubSliceIndex])
+
+		for leftSliceIndex+rightSliceIndex-sliceSize < nextEndSubSliceIndex {
+			if (leftSliceIndex < sliceSize) && (slice[leftSliceIndex] < slice[rightSliceIndex]) {
+				sortedSlice[leftSliceIndex+rightSliceIndex-sliceSize] = slice[leftSliceIndex]
+				leftSliceIndex++
 			} else {
-				sortedSlice[leftIndex+rightIndex] = slice[rightIndex]
-				rightIndex++
+				sortedSlice[leftSliceIndex+rightSliceIndex-sliceSize] = slice[rightSliceIndex]
+				rightSliceIndex++
 			}
+			fmt.Println(sortedSlice)
+			// if slice[leftSliceIndex] <= slice[rightSliceIndex] {
+			// 	sortedSlice[leftSliceIndex+rightSliceIndex-sliceSize+1] = slice[leftSliceIndex]
+			// 	leftSliceIndex++
+			// } else {
+			// 	sortedSlice[leftSliceIndex+rightSliceIndex-sliceSize+1] = slice[rightSliceIndex]
+			// 	rightSliceIndex++
+			// }
 		}
-		sortedSubSliceEndIndex = nextEndSubSliceIndex
 	}
-	fmt.Println(slice)
 	return sortedSlice
 }
-
-//	func merging(leftSlice []int, rightSlice []int) []int {
-//		leftSliceLen := len(leftSlice)
-//		rightSliceLen := len(rightSlice)
-//		var merged []int = make([]int, leftSliceLen+rightSliceLen)
-//		leftIndex := 0
-//		rightIndex := 0
-//		for leftSliceLen+rightSliceLen > leftIndex+rightIndex {
-//			if rightIndex >= rightSliceLen || (leftIndex < leftSliceLen && leftSlice[leftIndex] <= rightSlice[rightIndex]) {
-//				merged[leftIndex+rightIndex] = leftSlice[leftIndex]
-//				leftIndex++
-//			} else {
-//				merged[leftIndex+rightIndex] = rightSlice[rightIndex]
-//				rightIndex++
-//			}
-//		}
-//		return merged
-//	}
 
 func getMinrun(n int) int {
 	var lastBit int = 0
