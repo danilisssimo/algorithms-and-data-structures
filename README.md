@@ -47,7 +47,7 @@
 - ✅ [Сортировка слиянием (Merge Sort)](/Algorithms/SortingAlgorithms/mergeSort/README.md)  
 - ✅ [Сортировка выбором (Selection Sort)](/Algorithms/SortingAlgorithms/selectionSort/README.md)  
 - ✅ [Быстрая сортировка (Quick Sort)](/Algorithms/SortingAlgorithms/quickSort/README.md)  
-- ⏳ [Timsort](/Algorithms/SortingAlgorithms/TimSort/README.md)
+- ✅ [Timsort](/Algorithms/SortingAlgorithms/TimSort/README.md)
 - ⏳ [Сортировка кучей (Heap Sort)](#)  
 - ⏳ [Сортировка подсчетом (Counting Sort)](#)  
 - ⏳ [Сортировка Шелла (Shell Sort)](#)  
