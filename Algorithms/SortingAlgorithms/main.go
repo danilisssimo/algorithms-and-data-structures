@@ -57,7 +57,8 @@ func TestCasesForTimsort() {
 		503, 72, 908, 655, 392, 546, 92,
 		650, 521, 872,
 	}
-	fmt.Println(timsort.Sorted(testCase))
+	timsort.Sorted(testCase)
+	fmt.Println(testCase)
 }
 
 func genTest(length int) {
